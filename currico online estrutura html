@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criar Currículo</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <header>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+        <h1>PREENCHA OS CAMPOS DO CURRÍCULO</h1>
+    </header>
+
+    <main>
+        <form action="fpdf.php" method="post" enctype="multipart/form-data">
+
+            <label for="foto">Foto Profissional:</label>
+            <input type="file" id="foto" name="foto" class="file-input"><br><br>
+
+            <label for="nome">Nome completo:</label>
+            <input type="text" id="nome" name="nome" class="campo-medio"><br><br>
+            
+            <label for="outro">Nascimento:</label>
+            <input type="text" id="Nome" name="Nome" placeholder="(xx/xx/xxxx)" class="campo-pequeno"><br><br>
+
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" placeholder="email@gmail.com" class="campo-medio" required><br><br>
+
+            <label for="telefone">Telefone Fixo:</label>
+            <input type="tel" id="telefone" name="telefone" placeholder="(ddd) xxxx-xxxx" class="campo-medio" required><br><br>
+
+            <label for="celular">Telefone-Celular:</label>
+            <input type="tel" id="celular" name="celular" placeholder="(ddd) xxxxx-xxxxx" class="campo-medio" required><br><br>
+
+            <div class="campo-container">
+                <div class="campo">
+                    <label for="endereco">Endereço (Rua):</label>
+                    <input type="text" id="endereco" name="endereco" class="campo-rua">
+                </div>
+            
+                <div class="campo">
+                    <label for="bairro">Bairro:</label>
+                    <input type="text" id="bairro" name="bairro" class="campo-rua">
+                </div>
+            
+                <div class="campo">
+                    <label for="numero">Número:</label>
+                    <input type="text" id="numero" name="numero" class="campo-numero">
+                </div>
+            </div>
+
+            <label for="estadoCivil">Estado Civil:</label>
+            <select id="estadoCivil" name="estadoCivil" class="campo-numero" required>
+            <option value="solteiro">Solteiro</option>
+            <option value="casado">Casado</option>
+            <option value="divorciado">Divorciado</option>
+            <option value="divorciado">Outro</option>
+            </select><br><br>
+
+            <label for="formaçãoacademica">Formação Academica</label>
+            <select id="Ensino" name="estadoCivil" class="campo-numero" required>
+            <option value="Ensino">Ensino fundamental completo</option>
+            <option value="Ensino">Ensino médio completo</option>
+            <option value="Ensino">Cursando Ensino Superior</option>
+            <option value="Ensino">Outro</option>
+            </select><br><br>
+
+            <p><span id="caracteres-digitados">0</span> / 500 caracteres</p>
+            <label for="habilidades">Habilidades:</label>
+            <textarea id="habilidades" name="habilidades" class="campo-grande" rows="4" cols="50" required></textarea><br><br>
+            <script src="habilidades.js"></script>
+         
+            <div class="campo-experiencia">
+                <div class="empresa">
+                    <label for="empresa">Empresa:</label>
+                    <input type="text" id="empresa" name="empresa" class="campo-empresa">
+                </div>
+            
+                <div class="campo">
+                    <label for="cargo">Cargo:</label>
+                    <input type="text" id="cargo" name="cargo" class="campo-empresa">
+                </div>
+            
+                <div class="campo">
+                    <label for="inicio">Início:</label>
+                    <input type="text" id="inicio" name="inicio" placeholder="xx/xx/xxxx" class="campo-empresa">
+                </div>
+            
+                <div class="campo">
+                    <label for="saida">Saída:</label>
+                    <input type="text" id="saida" name="saida" placeholder="xx/xx/xxxx" class="campo-empresa">
+                </div>
+            </div>
+            
+        
+            <input type="submit" value="Criar Currículo">
+        </form>
+    </main>
+
+    <footer>
+        <!-- Seu rodapé aqui -->
+    </footer>
+</body>
+</html>
